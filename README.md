@@ -29,12 +29,22 @@ cp .env.example .env
 php artisan key:generate
 ```
 
-6- create necessary tables:
+6- setup database in env file:
+```shell
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=test_database_name
+DB_USERNAME=test_db_username
+DB_PASSWORD=test_password
+```
+
+7- create necessary tables:
 ```shell
 php artisan migrate
 ```
 
-7- run the project:
+8- run the project:
 ```shell
 php artisan serve
 ```
